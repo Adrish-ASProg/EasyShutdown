@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EasyShutdown.Properties;
+using System;
 using System.Windows.Forms;
 
 namespace EasyShutdown {
@@ -8,6 +9,7 @@ namespace EasyShutdown {
             InitializeComponent();
 
             dateTimeDay.MinDate = DateTime.Today;
+            this.Icon = Resources.icon;
         }
 
 
