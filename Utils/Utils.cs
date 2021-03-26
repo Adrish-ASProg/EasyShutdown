@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Shutdown {
+namespace EasyShutdown {
     public static class Utils {
 
         public static void ScheduleShutdown(int timeoutInSeconds) {

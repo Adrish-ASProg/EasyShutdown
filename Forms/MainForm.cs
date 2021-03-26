@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Shutdown {
+namespace EasyShutdown {
     public partial class MainForm : Form {
 
         public MainForm() {

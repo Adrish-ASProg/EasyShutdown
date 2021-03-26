@@ -1,4 +1,4 @@
-﻿namespace Shutdown
+﻿namespace EasyShutdown
 {
     partial class MainForm
     {
@@ -30,8 +30,8 @@
         {
             this.dateTimeDay = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioAtTime = new System.Windows.Forms.RadioButton();
             this.radioAfterPeriod = new System.Windows.Forms.RadioButton();
+            this.radioAtTime = new System.Windows.Forms.RadioButton();
             this.buttonOk = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.menuItemFile = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,17 +71,6 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
-            // radioAtTime
-            // 
-            this.radioAtTime.AutoSize = true;
-            this.radioAtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioAtTime.Location = new System.Drawing.Point(197, 15);
-            this.radioAtTime.Name = "radioAtTime";
-            this.radioAtTime.Size = new System.Drawing.Size(140, 21);
-            this.radioAtTime.TabIndex = 1;
-            this.radioAtTime.Text = "A la date indiquée";
-            this.radioAtTime.UseVisualStyleBackColor = true;
-            // 
             // radioAfterPeriod
             // 
             this.radioAfterPeriod.AutoSize = true;
@@ -95,6 +84,17 @@
             this.radioAfterPeriod.Text = "Après le temps indiqué";
             this.radioAfterPeriod.UseVisualStyleBackColor = true;
             this.radioAfterPeriod.CheckedChanged += new System.EventHandler(this.radioAfterPeriod_CheckedChanged);
+            // 
+            // radioAtTime
+            // 
+            this.radioAtTime.AutoSize = true;
+            this.radioAtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioAtTime.Location = new System.Drawing.Point(197, 15);
+            this.radioAtTime.Name = "radioAtTime";
+            this.radioAtTime.Size = new System.Drawing.Size(140, 21);
+            this.radioAtTime.TabIndex = 1;
+            this.radioAtTime.Text = "A la date indiquée";
+            this.radioAtTime.UseVisualStyleBackColor = true;
             // 
             // buttonOk
             // 

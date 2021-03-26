@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{60B45653-42E8-4B41-BF4B-0FAFE889E2D7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Shutdown</RootNamespace>
-    <AssemblyName>Shutdown</AssemblyName>
+    <RootNamespace>EasyShutdown</RootNamespace>
+    <AssemblyName>EasyShutdown</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
