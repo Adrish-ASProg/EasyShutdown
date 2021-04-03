@@ -130,6 +130,7 @@
             // 
             // menuItemCancelShutdown
             // 
+            this.menuItemCancelShutdown.Image = global::EasyShutdown.Properties.Resources.cancel;
             this.menuItemCancelShutdown.Name = "menuItemCancelShutdown";
             this.menuItemCancelShutdown.Size = new System.Drawing.Size(226, 22);
             this.menuItemCancelShutdown.Text = "Annuler une programmation";
@@ -142,6 +143,7 @@
             // 
             // menuItemQuit
             // 
+            this.menuItemQuit.Image = global::EasyShutdown.Properties.Resources.exit;
             this.menuItemQuit.Name = "menuItemQuit";
             this.menuItemQuit.Size = new System.Drawing.Size(226, 22);
             this.menuItemQuit.Text = "Quitter";
