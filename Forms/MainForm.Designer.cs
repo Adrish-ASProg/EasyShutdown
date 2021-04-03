@@ -212,7 +212,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dateTimeDay);
             this.Controls.Add(this.menu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menu;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Programmer l\'arrêt";
