@@ -1,4 +1,5 @@
-﻿using EasyShutdown.Properties;
+﻿using EasyShutdown.Forms;
+using EasyShutdown.Properties;
 using System;
 using System.Windows.Forms;
 
@@ -9,7 +10,7 @@ namespace EasyShutdown {
             InitializeComponent();
 
             dateTimeDay.MinDate = DateTime.Today;
-            this.Icon = Resources.icon;
+            this.Icon = Resources.shutdown;
         }
 
 
@@ -35,13 +36,22 @@ namespace EasyShutdown {
                 action = Utils.ScheduleHibernation;
             }
 
+            var message = $"Programmer {mode} le {shutdownDate.ToString("dddd dd MMMM' à 'HH\\:mm")} ?\n" +
+                $"({remainingTime:%d' jours et 'hh\\:mm\\:ss} restant)";
 
-            var dialogResult = Utils.ShowConfirmDialog(this,
-                $"Programmer {mode} le {shutdownDate.ToString("dddd dd MMMM' à 'HH\\:mm")} ?\n" +
-                $"({remainingTime:%d' jours et 'hh\\:mm\\:ss} restant)");
+            var autoClosePreference = Settings.Default.autoClose;
 
-            if (dialogResult == DialogResult.Yes)
+            var confirmForm = new FormConfirm(message, autoClosePreference);
+            confirmForm.ShowDialog();
+
+            if (confirmForm.DialogResult == DialogResult.Yes) {
                 action.Invoke((int) Math.Round(remainingTime.TotalSeconds));
+
+                Settings.Default.autoClose = confirmForm.isCheckboxChecked();
+                Settings.Default.Save();
+
+                if (confirmForm.isCheckboxChecked()) Close();
+            }
         }
 
         private DateTime ComputeShutdownDate() {
@@ -102,7 +112,7 @@ namespace EasyShutdown {
 
         private void menuItemAbout_Click(object sender, EventArgs e) {
             MessageBox.Show(this,
-                "EasyShutdown v0.1\n\n© 2021 ASProg - All Rights reserved", "À propos", MessageBoxButtons.OK);
+                "EasyShutdown v0.1\nIcons: Flaticon.com ♥\n© 2021 ASProg - All Rights reserved", "À propos", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void menuItemQuit_Click(object sender, EventArgs e) {

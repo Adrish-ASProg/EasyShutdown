@@ -22,5 +22,17 @@ namespace EasyShutdown.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool autoClose {
+            get {
+                return ((bool)(this["autoClose"]));
+            }
+            set {
+                this["autoClose"] = value;
+            }
+        }
     }
 }
